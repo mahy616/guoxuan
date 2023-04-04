@@ -1,0 +1,68 @@
+{
+  "ModuleData": [
+    {
+      "ID": "44332",
+      "Name": "OCR1",
+      "Type": "ocr",
+      "ModelVersion": "v1",
+      "Labels": [
+        {
+          "Name": "A",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "B",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "0",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "1",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "2",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "3",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "4",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "5",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "6",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "7",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "8",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "9",
+          "Color": "#D40005"
+        },
+        {
+          "Name": "-",
+          "Color": "#D40005"
+        },
+        {
+          "Name": ".",
+          "Color": "#D40005"
+        }
+      ]
+    }
+  ]
+}

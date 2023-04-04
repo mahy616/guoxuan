@@ -1,0 +1,39 @@
+{
+  "Version":  "2.2.2",
+  "Types":  [
+    {
+      "DatasetID":  "18209",
+      "Name":  "18209",
+      "Solutions":  [
+        {
+          "No":  0,
+          "Modules":  [
+            {
+              "Name":  "44650",
+              "Type":  "ocr",
+              "Input":  {
+                "LastAction":  {
+                  "Type":  "Roi",
+                  "Action":  -1
+                },
+                "UserInput":  {
+                  "RelativePosition":  "-11,-24",
+                  "Roi":  "",
+                  "Spin":  0,
+                  "Xdelta":  -84,
+                  "Ydelta":  -388
+                }
+              },
+              "ModelPath":  [
+                "67797/0/model/model-final.smartmore"
+              ],
+              "ModelID":  "67797",
+              "RealName":  "OCR1"
+            }
+          ]
+        }
+      ],
+      "RealName":  "解决方案1"
+    }
+  ]
+}

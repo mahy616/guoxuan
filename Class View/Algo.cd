@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="&lt;1&gt;具体的算法实现类，此类为vimo&#xD;&#xA;&lt;2&gt;存放ViMoAlgoBase数组,数组每个成员是一个module模块&#xD;&#xA;&lt;3&gt;RunAlgo手动串联">
+    <Position X="4.207" Y="0.649" Height="0.984" Width="2.483" />
+  </Comment>
+  <Comment CommentText="&lt;1&gt;算法线程，与软件主程序进行交互&#xD;&#xA;&lt;2&gt;成员变量存放算法类的对象指针&#xD;&#xA;&lt;3&gt;生成者消费者模式&#xD;&#xA;&lt;4&gt;考虑到自由采集，此处队列设置容量，外部插入待识别数据不一定会成功">
+    <Position X="0.543" Y="0.6" Height="1.072" Width="2.542" />
+  </Comment>
+  <Comment CommentText="&lt;1&gt;ViMo有4个模型，各自的run函数与后处理不同，设计ViMoAlgoBase基类以提供对外调用的统一接口&#xD;&#xA;&lt;2&gt;RunAlgo函数重载，一个是用于跑前置模块，另一个用于跑后置模块&#xD;&#xA;&lt;3&gt;Run函数通过输入引用变量与外部进行数据交互，包括渲染图，结果字符串等">
+    <Position X="9.533" Y="0.5" Height="0.833" Width="7.25" />
+  </Comment>
+  <Class Name="AlgoViMo">
+    <Position X="4.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ASAAAAAAAAAAIAAALAAAACAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Algo\AlgoViMo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViMoAlgoBase">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASBAAAEACIAAAAABJAAAAAAAAQAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Algo\ViMoAlgoBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViMoAlgoClassification">
+    <Position X="7" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAAAAAAIAAAAAAAJAAAAAAAAQEAAAAAAAAAAEAAAQA=</HashCode>
+      <FileName>Algo\ViMoAlgoClassification.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViMoAlgoDetection">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAQAAAAgAAAJAAAAAAAAQAAAAEBAAgEAECAAAA=</HashCode>
+      <FileName>Algo\ViMoAlgoDetection.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViMoAlgoOCR">
+    <Position X="12.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQAAABAAAAAAAAAAJAAAAAAAAQAABAAAAAgIAEAAAAA=</HashCode>
+      <FileName>Algo\ViMoAlgoOCR.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViMoAlgoSegmentation">
+    <Position X="14.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CSAAYAAAgAAAgAAAJAAQEAAAIQAAAAEAAAgAAECACAA=</HashCode>
+      <FileName>Algo\ViMoAlgoSegmentation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAlgoThread">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="CAlgoThread::AlgoState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>AlgoThread.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAAQBgAAAAAIAABBJCAEAAEAAAAAgACAAAAQAABJgAA=</HashCode>
+      <FileName>AlgoThread.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ThreadQueueInfos">
+    <Position X="1" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAQAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

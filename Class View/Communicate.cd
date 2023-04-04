@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="&lt;1&gt;所有通讯模块继承自这个基类&#xD;&#xA;&lt;2&gt;每个通讯模块连接所加载的配置不同，定义了加载配置与获取配置的虚函数&#xD;&#xA;&lt;3&gt;串口与网口通过信号接收数据，PLC相关通过读写接口&#xD;&#xA;">
+    <Position X="5.042" Y="0.5" Height="1.467" Width="4.742" />
+  </Comment>
+  <Comment CommentText="每个子类都有一个设置的友元类&#xD;&#xA;通过OpenSetting打开设置界面">
+    <Position X="7.367" Y="5.425" Height="0.492" Width="2.275" />
+  </Comment>
+  <Comment CommentText="&lt;1&gt;ConfigProgramme是单例类&#xD;&#xA;&lt;2&gt;在设置界面每添加一个通讯模块，会存到方案配置类的&#xD;&#xA;QMap&lt;QString, CommunicateBase*&gt;里，&#xD;&#xA;通讯模块的名称是唯一的，通过名称索引到通讯基本指针&#xD;&#xA;">
+    <Position X="15.933" Y="0.5" Height="0.833" Width="5.167" />
+  </Comment>
+  <Class Name="CommunicateBase">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAgAAAAAAAEAAAABAAAAAgAAAAAAACAAAAAAGACAA=</HashCode>
+      <FileName>Communicate\CommunicateBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommunicateMC_Bin">
+    <Position X="10.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAMAAAABAAAAAgAAAAAAQCAAAAQAGIAAA=</HashCode>
+      <FileName>Communicate\CommunicateMC_Bin.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommunicateSerial">
+    <Position X="2.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoEAAAoAAMAAAABAACAAAAAAAAEACAAgAAAGAAAA=</HashCode>
+      <FileName>Communicate\CommunicateSerial.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommunicateTCP">
+    <Position X="6.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBCwFAIAAAMMADAABgAAIAkACAACAACBAACAAmAAEA=</HashCode>
+      <FileName>Communicate\CommunicateTCP.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogMCBinSetting">
+    <Position X="12.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAEAMAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communicate\DialogMCBinSetting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogTCPSettings">
+    <Position X="8.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgBAEAABAAANBAAYAAAAACAABAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Communicate\DialogTCPSettings.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogSerialSettings">
+    <Position X="4" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAIBAAMAAAIAAAAAgAAAAAAAACABAoQAAAAAQ=</HashCode>
+      <FileName>Communicate\DialogSerialSettings.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConfigProgramme">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAQAAAAAQAAAAIAAAACgACQBAJAAAEIQAAAAAAAAQA=</HashCode>
+      <FileName>components\Config\ConfigProgramme.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

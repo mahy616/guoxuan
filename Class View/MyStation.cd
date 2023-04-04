@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="&lt;1&gt;相机原图与渲染图在同一个类中，通过结构体的bool变量标识不同的数据&#xD;&#xA;&lt;2&gt;在构造函数中执行按照天数与数量的自动删除&#xD;&#xA;&lt;3&gt;通过int变量先记录软件刚打开时的图片数量，后续判断变量大于设定值执行自动删除&#xD;&#xA;&lt;4&gt;考虑到自由采集的情况，给该类队列设置了最大值，超过该值放弃此图的保存">
+    <Position X="22.984" Y="6.17" Height="0.978" Width="5.528" />
+  </Comment>
+  <Comment CommentText="&lt;1&gt;获取到相机的一张图片时，先插入列表控制，显示未识别&#xD;&#xA;&lt;2&gt;获取算法线程的结果时，根据列表的行数对应渲染结果">
+    <Position X="17.75" Y="6" Height="1.51" Width="1.7" />
+  </Comment>
+  <Comment CommentText="&lt;1&gt;通过QMap&lt;QString, DataStatis*&gt; m_LabelMap&#xD;&#xA;存放各个标签的统计数据&#xD;&#xA;&lt;2&gt;通过信号槽与算法类的结果通讯，解析算法类中的QString，对应的value++">
+    <Position X="12.539" Y="6.092" Height="1.194" Width="2.652" />
+  </Comment>
+  <Comment CommentText="图像源设置">
+    <Position X="0.586" Y="7.006" Height="0.443" Width="1.058" />
+  </Comment>
+  <Comment CommentText="算法方案设置">
+    <Position X="2.492" Y="7.038" Height="0.376" Width="1.135" />
+  </Comment>
+  <Comment CommentText="阈值设置">
+    <Position X="4.424" Y="7.124" Height="0.29" Width="0.78" />
+  </Comment>
+  <Comment CommentText="显示图像Widget">
+    <Position X="5.886" Y="7.1" Height="0.342" Width="1.277" />
+  </Comment>
+  <Comment CommentText="&lt;1&gt;MyStation类是一个抽象出来的类，一个工位存放了图像检测流程中所有相关的类对象指针，成员变量包括下面的图像源类，算法类，结果类，统计类，存图类，窗口类&#xD;&#xA;&lt;2&gt;设计此类的目的为了实现动态创建窗口，同时将各个类间的连接关系统一到此类中&#xD;&#xA;&lt;3&gt;通过inintConnection函数将各个对象指针通过信号槽连接起来&#xD;&#xA;具体为：图像源类——》算法类——》显示与存图类&#xD;&#xA;&lt;4&gt;销毁MyStation时，需先判断算法类是否还在检测中">
+    <Position X="18.871" Y="1.175" Height="1.989" Width="4.149" />
+  </Comment>
+  <Comment CommentText="通过回调函数获取到主程序中是否正在运行与算法类信息&#xD;&#xA;&lt;1&gt;主程序正在运行时无法打开“图像源设置”，必须先停止工作&#xD;&#xA;&lt;2&gt;算法类正在初始化过程中无法切换算法方案&#xD;&#xA;&lt;3&gt;算法类没初始化成功前无法设置阈值">
+    <Position X="2.03" Y="4.249" Height="1.066" Width="4.105" />
+  </Comment>
+  <Class Name="MyStation">
+    <Position X="16.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAgAAAAAAeAAEAAAAgAAJAAAAQAgAAAzBEUAAA=</HashCode>
+      <FileName>MyStation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAlgoThread" Collapsed="true">
+    <Position X="10.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAQBgAAAAAIAAABJCAEAIEAAAAAgACAAAAAAABJgAA=</HashCode>
+      <FileName>Algo\AlgoThread.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataStatistics" Collapsed="true">
+    <Position X="13" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAIAAUAIAAAAEAAQAE4AAgAIJEAABAAAAAIA=</HashCode>
+      <FileName>UI\DataStatistics.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageWindow" Collapsed="true">
+    <Position X="3.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAAiAEQASoEAAgADAAAABJAAAAIgA0AkQEDhIAIAA=</HashCode>
+      <FileName>UI\ImageWindow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSaveImage" Collapsed="true">
+    <Position X="23" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQoAAAAAAQAMAABAAAAAAFBEAAQAIAAIAAAAJgBA=</HashCode>
+      <FileName>components\SaveImage\SaveImage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeStatistics" Collapsed="true">
+    <Position X="15.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAiAACAAAAEAAAAAAGEAAIAIAAIAIAAAABAhAAAAA=</HashCode>
+      <FileName>UI\TimeStatistics.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyTableWidget" Collapsed="true">
+    <Position X="17.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAgwAIACAAAAABAAAAAA=</HashCode>
+      <FileName>UI\MyWidget\MyTableWidget.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageSourceBase" Collapsed="true">
+    <Position X="20.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAACAKQAAEAAAAAAAABAAAAAAAIBAAAAAAAAg=</HashCode>
+      <FileName>ImageSource\ImageSouceBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThresholdSet" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAAAAIAAAAAAEAAAAQAAAgCAAAACAAAkABQCgAAAAAA=</HashCode>
+      <FileName>Threshold\ThresholdSet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ModelConfigDialg" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAACAAAAAAFBAAAUAASAAAAAAAAAQBAAAhAgAAAAA=</HashCode>
+      <FileName>UI\Menu\ModelConfigDialg.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageSourceSetting" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAEBQQAAACAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ImageSource\ImageSourceSetting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyLabel" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAoAAAAAgABAAAABBAAAgAFQQAAQACAAEAAACAAMAAA=</HashCode>
+      <FileName>UI\MyWidget\MyLabel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

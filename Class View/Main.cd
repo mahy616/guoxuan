@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="&lt;1&gt;成员变量有std::vector&lt;MyStation*&gt; m_Station，通过新建窗口按钮与关闭窗口按钮管理MyStation数组&#xD;&#xA;&lt;2&gt;单步，开始，停止函数，对应调用每个MyStation类的图像源接口，获取数据&#xD;&#xA;&lt;3&gt;当图像源是相机时，开始工作通过相机状态获取软件的运行状态；当图像源是本地图片文件夹时，点击开始工作置为运行中状态，通过定时器监控算法类的状态，当所有工位的算法都运行结束，置为未运行。&#xD;&#xA;&lt;4&gt;工作状态有三态，运行中，未运行，等待结束&#xD;&#xA;&lt;5&gt;通过获取按钮的使能状态判断当前的运行状态，将该函数指针赋值给每个MyStation类">
+    <Position X="0.933" Y="1.483" Height="2.229" Width="3.525" />
+  </Comment>
+  <Comment CommentText="单例的方案配置类，std::vector&lt;WindowsConfig&gt; AllConfig保存当前的工位信息，&#xD;&#xA;通过该类加载与保存配置信息">
+    <Position X="12.37" Y="1.732" Height="0.815" Width="2.62" />
+  </Comment>
+  <Class Name="DynamicWidget">
+    <Position X="5" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="DynamicWidget::RuningState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DynamicWidget.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gBQABgAABAAAkIBQAIBYAAAAAgAEAABIgAACEBAAgQA=</HashCode>
+      <FileName>DynamicWidget.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConfigProgramme">
+    <Position X="12.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAQAAAAAQAAAAIAAAACgACQBAJAAAEIQAAAAAAAAQA=</HashCode>
+      <FileName>components\Config\ConfigProgramme.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

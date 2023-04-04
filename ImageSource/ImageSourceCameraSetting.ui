@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageSourceCameraSetting</class>
+ <widget class="QWidget" name="ImageSourceCameraSetting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1091</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>相机设置</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color:white;
+font-size: 11pt;
+background: #323232;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btnEnumCamera">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
+QPushButton:hover
+{
+	background-color:rgba(255, 255, 255, 0.1);
+}
+QPushButton:pressed
+{
+	background-color:rgba(255, 255, 255, 0.2);
+}</string>
+       </property>
+       <property name="text">
+        <string>Search for Camera(s)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxCameras">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #262626;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnOpenCamera">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
+QPushButton:hover
+{
+	background-color:rgba(255, 255, 255, 0.1);
+}
+QPushButton:pressed
+{
+	background-color:rgba(255, 255, 255, 0.2);
+}</string>
+       </property>
+       <property name="text">
+        <string>Open</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCloseCamera">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+{
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
+QPushButton:hover
+{
+	background-color:rgba(255, 255, 255, 0.1);
+}
+QPushButton:pressed
+{
+	background-color:rgba(255, 255, 255, 0.2);
+}</string>
+       </property>
+       <property name="text">
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,10,1">
+     <item>
+      <widget class="QLineEdit" name="lineEditStatistic">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #262626;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="MyLabel" name="ShowWidget" native="true">
+       <property name="styleSheet">
+        <string notr="true">border-image:url(:/DynamicWidget/Resource/background.png);</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="2">
+        <widget class="QPushButton" name="btnStop">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
+QPushButton:hover
+{
+	background-color:rgba(255, 255, 255, 0.1);
+}
+QPushButton:pressed
+{
+	background-color:rgba(255, 255, 255, 0.2);
+}</string>
+         </property>
+         <property name="text">
+          <string>Stop</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btnSingleShot">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
+QPushButton:hover
+{
+	background-color:rgba(255, 255, 255, 0.1);
+}
+QPushButton:pressed
+{
+	background-color:rgba(255, 255, 255, 0.2);
+}</string>
+         </property>
+         <property name="text">
+          <string>Single Capture</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btnContinuous">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
+QPushButton:hover
+{
+	background-color:rgba(255, 255, 255, 0.1);
+}
+QPushButton:pressed
+{
+	background-color:rgba(255, 255, 255, 0.2);
+}</string>
+         </property>
+         <property name="text">
+          <string>Continuous Capture</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_12">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Parameters Settings</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="styleSheet">
+        <string notr="true">QGroupBox
+{
+border:2px solid #1C1C1C;
+border-radius: 3px;
+}</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,3,1">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">color: #999999;</string>
+            </property>
+            <property name="text">
+             <string>Exposure Time</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSlider" name="horizontalSliderExposure">
+            <property name="styleSheet">
+             <string notr="true">QSlider::groove:horizontal {
+    border-radius: 4px;
+    height: 18px;
+    background: &quot;transparent&quot;;
+}
+
+QSlider::handle:horizontal {
+    height: 18px;
+    width:18px;
+    background: #FFFFFF;
+        border:1px solid #330052D9;
+        border-radius:9px;
+}
+
+QSlider::add-page:horizontal {
+    border-radius: 4px;
+    height: 8px;
+    margin-top:5px;
+    margin-bottom:5px;
+    background: #E7E7E7;
+    
+}
+QSlider::sub-page:horizontal {
+    border-radius: 4px;
+    height: 8px;
+    margin-top:5px;
+    margin-bottom:5px;
+    background: #0052D9;
+}</string>
+            </property>
+            <property name="maximum">
+             <number>999999999</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditExposure">
+            <property name="styleSheet">
+             <string notr="true">background: #262626;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,3,1">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">color: #999999;</string>
+            </property>
+            <property name="text">
+             <string>Gain</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSlider" name="horizontalSliderGain">
+            <property name="styleSheet">
+             <string notr="true">QSlider::groove:horizontal {
+    border-radius: 4px;
+    height: 18px;
+    background: &quot;transparent&quot;;
+}
+
+QSlider::handle:horizontal {
+    height: 18px;
+    width:18px;
+    background: #FFFFFF;
+        border:1px solid #330052D9;
+        border-radius:9px;
+}
+
+QSlider::add-page:horizontal {
+    border-radius: 4px;
+    height: 8px;
+    margin-top:5px;
+    margin-bottom:5px;
+    background: #E7E7E7;
+    
+}
+QSlider::sub-page:horizontal {
+    border-radius: 4px;
+    height: 8px;
+    margin-top:5px;
+    margin-bottom:5px;
+    background: #0052D9;
+}</string>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEditGain">
+            <property name="styleSheet">
+             <string notr="true">background: #262626;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">color: #999999;</string>
+            </property>
+            <property name="text">
+             <string>Pixel Format</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBoxPixelFormat">
+            <property name="styleSheet">
+             <string notr="true">background: #262626;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="styleSheet">
+             <string notr="true">color: #999999;</string>
+            </property>
+            <property name="text">
+             <string>Trigger Mode</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBoxTriggerMode">
+            <property name="styleSheet">
+             <string notr="true">background: #262626;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="styleSheet">
+             <string notr="true">color: #999999;</string>
+            </property>
+            <property name="text">
+             <string> Trigger Type</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QGridLayout" name="gridLayout">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QRadioButton" name="radioButton_free">
+               <property name="text">
+                <string>FreeRun</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QRadioButton" name="radioButton_hard">
+               <property name="text">
+                <string>Hardware</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QRadioButton" name="radioButton_soft">
+               <property name="text">
+                <string>Software</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_Trigger" native="true">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="horizontalSpacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_TriggerLabel">
+             <property name="styleSheet">
+              <string notr="true">color: #999999;</string>
+             </property>
+             <property name="text">
+              <string>Trigger Settings</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="groupBox_Trigger">
+             <property name="styleSheet">
+              <string notr="true">QGroupBox
+{
+border:2px solid #1C1C1C;
+border-radius: 3px;
+}</string>
+             </property>
+             <property name="title">
+              <string/>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="styleSheet">
+                 <string notr="true">color: #999999;</string>
+                </property>
+                <property name="text">
+                 <string>Trigger Source</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="comboBoxTriggerSource">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background: #262626;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QWidget" name="widget_SoftTrigger" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_2">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_8">
+                   <item>
+                    <widget class="QLabel" name="label_7">
+                     <property name="styleSheet">
+                      <string notr="true">color: #999999;</string>
+                     </property>
+                     <property name="text">
+                      <string>Software</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btnSoftwareTrigger">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">
+
+QPushButton
+{
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
+QPushButton:hover
+{
+	background-color:rgba(255, 255, 255, 0.1);
+}
+QPushButton:pressed
+{
+	background-color:rgba(255, 255, 255, 0.2);
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>Manual Trigger</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_9">
+                   <item>
+                    <widget class="QLabel" name="label_10">
+                     <property name="styleSheet">
+                      <string notr="true">color: #999999;</string>
+                     </property>
+                     <property name="text">
+                      <string>Trigger String</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineEdit_TriggerStr">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background: #262626;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btn_ConnectCommunicate">
+                     <property name="minimumSize">
+                      <size>
+                       <width>100</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
+QPushButton:hover
+{
+	background-color:rgba(255, 255, 255, 0.1);
+}
+QPushButton:pressed
+{
+	background-color:rgba(255, 255, 255, 0.2);
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>Bind</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_SoftTriggerState">
+                     <property name="minimumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>159</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MyLabel</class>
+   <extends>QWidget</extends>
+   <header>UI/MyWidget/mylabel.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

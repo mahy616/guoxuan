@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="compontents">
+      <UniqueIdentifier>{36ede304-696f-48a6-82d0-e9d8fd871a13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compontents\Camera">
+      <UniqueIdentifier>{03c5fdec-1149-48db-8493-575e4bc6f368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compontents\Config">
+      <UniqueIdentifier>{5ac50453-3b5f-4689-9909-24a5db6b6afc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SoftSetting">
+      <UniqueIdentifier>{1b84c2a3-ef77-498c-99fe-192876a388de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Communicate">
+      <UniqueIdentifier>{42763c9b-7f18-4fb1-9b2c-83d8753af8c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Communicate\MC_Bin">
+      <UniqueIdentifier>{0ef3392e-059f-424e-9272-cf98b99d8cda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algo">
+      <UniqueIdentifier>{2582ade4-30c2-4f26-9166-4846a6d6fcda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threshold">
+      <UniqueIdentifier>{c03149aa-2c48-463c-ad3e-d7f261bad397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImageSource">
+      <UniqueIdentifier>{0e8409be-9a24-4f0d-9089-b23560a26dec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algo\ViMo_Module">
+      <UniqueIdentifier>{4ded60a1-d6f2-4b74-b841-99610100c462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threshold\VimoThreshold">
+      <UniqueIdentifier>{e8d8c960-477f-4017-8c18-f2ca62844f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SoftSetting\ProgrammeMannger">
+      <UniqueIdentifier>{423a3963-226d-4eec-9a44-3358cd04491c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SoftSetting\SaveImageMannger">
+      <UniqueIdentifier>{3d09f151-2ba3-4e8f-9e2f-fe554082c94e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SoftSetting\DisplaySetMannger">
+      <UniqueIdentifier>{60d7cce4-b507-4c09-ae48-ba0cd09a9bd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SoftSetting\CommunicationMannger">
+      <UniqueIdentifier>{9ebf1b79-1349-4e0f-b029-b4ff200962c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{31a7a155-df66-415c-8f89-063dac3fe7a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\MyWidget">
+      <UniqueIdentifier>{f1c70e38-e61e-4da0-91b7-ed239c0ecb15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Menu">
+      <UniqueIdentifier>{491df8dd-9399-4c42-8cd1-1d867496bc24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\MyDialog">
+      <UniqueIdentifier>{8b05ad16-23fc-49af-b841-af10cfcd6799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compontents\SaveImage">
+      <UniqueIdentifier>{8bfba96e-1141-4560-a085-033f1a3b84ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Performance">
+      <UniqueIdentifier>{4d8f6bf1-ebdb-4c8d-ad14-8caf13062966}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algo\ClassView">
+      <UniqueIdentifier>{112b69c1-d530-43e7-a11a-8758a088c31a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="DynamicWidget.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="DynamicWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="DynamicWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="DynamicWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PublicParamter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyStation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="components\Camera\Camera.cpp">
+      <Filter>compontents\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="components\Camera\CameraHikvision.cpp">
+      <Filter>compontents\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="components\Config\ConfigProgramme.cpp">
+      <Filter>compontents\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\CommunicateBase.cpp">
+      <Filter>Communicate</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\CommunicateSerial.cpp">
+      <Filter>Communicate</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\CommunicateTCP.cpp">
+      <Filter>Communicate</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\DialogSerialSettings.cpp">
+      <Filter>Communicate</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\DialogTCPSettings.cpp">
+      <Filter>Communicate</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\CommunicateMC_Bin.cpp">
+      <Filter>Communicate</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\DialogMCBinSetting.cpp">
+      <Filter>Communicate</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\MC_Bin\melsec_helper.cpp">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\MC_Bin\melsec_mc_ascii.cpp">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\MC_Bin\melsec_mc_bin.cpp">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\MC_Bin\melsec_mc_comm.cpp">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\MC_Bin\socket.cpp">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="Communicate\MC_Bin\utill.cpp">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClCompile>
+    <ClCompile Include="Algo\AlgoViMo.cpp">
+      <Filter>Algo</Filter>
+    </ClCompile>
+    <ClCompile Include="Threshold\ThresholdBase.cpp">
+      <Filter>Threshold</Filter>
+    </ClCompile>
+    <ClCompile Include="Threshold\ThresholdSet.cpp">
+      <Filter>Threshold</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageSource\ImageSourceCamera.cpp">
+      <Filter>ImageSource</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageSource\ImageSourceCameraSetting.cpp">
+      <Filter>ImageSource</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageSource\ImageSourceFile.cpp">
+      <Filter>ImageSource</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageSource\ImageSourceFileSetting.cpp">
+      <Filter>ImageSource</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageSource\ImageSourceSetting.cpp">
+      <Filter>ImageSource</Filter>
+    </ClCompile>
+    <ClCompile Include="Threshold\RenderSetWidget.cpp">
+      <Filter>Threshold</Filter>
+    </ClCompile>
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoBase.cpp">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoClassification.cpp">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoDetection.cpp">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoOCR.cpp">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoSegmentation.cpp">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClCompile>
+    <ClCompile Include="Algo\AlgoThread.cpp">
+      <Filter>Algo</Filter>
+    </ClCompile>
+    <ClCompile Include="Threshold\VimoThreshold\ThresholdClassification.cpp">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </ClCompile>
+    <ClCompile Include="Threshold\VimoThreshold\ThresholdDetection.cpp">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </ClCompile>
+    <ClCompile Include="Threshold\VimoThreshold\ThresholdOCR.cpp">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </ClCompile>
+    <ClCompile Include="Threshold\VimoThreshold\ThresholdSegmentation.cpp">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftSetting\CommunicationMannger\AddCommunicationDialog.cpp">
+      <Filter>SoftSetting\CommunicationMannger</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftSetting\CommunicationMannger\CommunicationSetting.cpp">
+      <Filter>SoftSetting\CommunicationMannger</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftSetting\ProgrammeMannger\CreateProgrammeName.cpp">
+      <Filter>SoftSetting\ProgrammeMannger</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftSetting\ProgrammeMannger\ProgrammeMannger.cpp">
+      <Filter>SoftSetting\ProgrammeMannger</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftSetting\SaveImageMannger\SaveImageWidget.cpp">
+      <Filter>SoftSetting\SaveImageMannger</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftSetting\DisplaySetMannger\ShowSetting.cpp">
+      <Filter>SoftSetting\DisplaySetMannger</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftSetting\SoftSetting.cpp">
+      <Filter>SoftSetting</Filter>
+    </ClCompile>
+    <ClCompile Include="components\Camera\SoftTriggerConnect.cpp">
+      <Filter>compontents\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageSource\ImageSouceBase.cpp">
+      <Filter>ImageSource</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyWidget\MyDoubleValidator.cpp">
+      <Filter>UI\MyWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyWidget\SetingItem.cpp">
+      <Filter>UI\MyWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyWidget\MyLogoButton.cpp">
+      <Filter>UI\MyWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyWidget\MyTableWidget.cpp">
+      <Filter>UI\MyWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyWidget\MyLabel.cpp">
+      <Filter>UI\MyWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\DataStatistics.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ImageWindow.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ResultsListWidget.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\TimeStatistics.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyTitleBar.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyToolBar.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyWidget\DialogTitleBar.cpp">
+      <Filter>UI\MyWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyWidget\DockWidgetTitter.cpp">
+      <Filter>UI\MyWidget</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyDialog\SoftInfoDialog.cpp">
+      <Filter>UI\MyDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\MyDialog\WaittingDialog.cpp">
+      <Filter>UI\MyDialog</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Menu\ModelConfigDialg.cpp">
+      <Filter>UI\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="components\Config\JsonReader.cpp">
+      <Filter>compontents\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="components\SaveImage\SaveImage.cpp">
+      <Filter>compontents\SaveImage</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Performance\GpuMonitor.cpp">
+      <Filter>UI\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Performance\OneMonitorWidget.cpp">
+      <Filter>UI\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Performance\PerformanceMonitorTitle.cpp">
+      <Filter>UI\Performance</Filter>
+    </ClCompile>
+    <ClCompile Include="guoxuan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sqliteSetting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="configmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultSetting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MyStation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="components\Camera\Camera.h">
+      <Filter>compontents\Camera</Filter>
+    </QtMoc>
+    <QtMoc Include="components\Camera\CameraHikvision.h">
+      <Filter>compontents\Camera</Filter>
+    </QtMoc>
+    <QtMoc Include="Communicate\CommunicateBase.h">
+      <Filter>Communicate</Filter>
+    </QtMoc>
+    <QtMoc Include="Communicate\CommunicateSerial.h">
+      <Filter>Communicate</Filter>
+    </QtMoc>
+    <QtMoc Include="Communicate\CommunicateTCP.h">
+      <Filter>Communicate</Filter>
+    </QtMoc>
+    <QtMoc Include="Communicate\DialogSerialSettings.h">
+      <Filter>Communicate</Filter>
+    </QtMoc>
+    <QtMoc Include="Communicate\DialogTCPSettings.h">
+      <Filter>Communicate</Filter>
+    </QtMoc>
+    <QtMoc Include="Communicate\CommunicateMC_Bin.h">
+      <Filter>Communicate</Filter>
+    </QtMoc>
+    <QtMoc Include="Communicate\DialogMCBinSetting.h">
+      <Filter>Communicate</Filter>
+    </QtMoc>
+    <QtMoc Include="Threshold\ThresholdBase.h">
+      <Filter>Threshold</Filter>
+    </QtMoc>
+    <QtMoc Include="Threshold\ThresholdSet.h">
+      <Filter>Threshold</Filter>
+    </QtMoc>
+    <QtMoc Include="ImageSource\ImageSouceBase.h">
+      <Filter>ImageSource</Filter>
+    </QtMoc>
+    <QtMoc Include="ImageSource\ImageSourceCameraSetting.h">
+      <Filter>ImageSource</Filter>
+    </QtMoc>
+    <QtMoc Include="ImageSource\ImageSourceFile.h">
+      <Filter>ImageSource</Filter>
+    </QtMoc>
+    <QtMoc Include="ImageSource\ImageSourceFileSetting.h">
+      <Filter>ImageSource</Filter>
+    </QtMoc>
+    <QtMoc Include="ImageSource\ImageSourceSetting.h">
+      <Filter>ImageSource</Filter>
+    </QtMoc>
+    <QtMoc Include="Threshold\RenderSetWidget.h">
+      <Filter>Threshold</Filter>
+    </QtMoc>
+    <QtMoc Include="Algo\AlgoThread.h">
+      <Filter>Algo</Filter>
+    </QtMoc>
+    <QtMoc Include="Threshold\VimoThreshold\ThresholdClassification.h">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </QtMoc>
+    <QtMoc Include="Threshold\VimoThreshold\ThresholdDetection.h">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </QtMoc>
+    <QtMoc Include="Threshold\VimoThreshold\ThresholdOCR.h">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </QtMoc>
+    <QtMoc Include="Threshold\VimoThreshold\ThresholdSegmentation.h">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </QtMoc>
+    <QtMoc Include="SoftSetting\CommunicationMannger\AddCommunicationDialog.h">
+      <Filter>SoftSetting\CommunicationMannger</Filter>
+    </QtMoc>
+    <QtMoc Include="SoftSetting\CommunicationMannger\CommunicationSetting.h">
+      <Filter>SoftSetting\CommunicationMannger</Filter>
+    </QtMoc>
+    <QtMoc Include="SoftSetting\ProgrammeMannger\CreateProgrammeName.h">
+      <Filter>SoftSetting\ProgrammeMannger</Filter>
+    </QtMoc>
+    <QtMoc Include="SoftSetting\ProgrammeMannger\ProgrammeMannger.h">
+      <Filter>SoftSetting\ProgrammeMannger</Filter>
+    </QtMoc>
+    <QtMoc Include="SoftSetting\SaveImageMannger\SaveImageWidget.h">
+      <Filter>SoftSetting\SaveImageMannger</Filter>
+    </QtMoc>
+    <QtMoc Include="SoftSetting\DisplaySetMannger\ShowSetting.h">
+      <Filter>SoftSetting\DisplaySetMannger</Filter>
+    </QtMoc>
+    <QtMoc Include="SoftSetting\SoftSetting.h">
+      <Filter>SoftSetting</Filter>
+    </QtMoc>
+    <QtMoc Include="components\Camera\SoftTriggerConnect.h">
+      <Filter>compontents\Camera</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyWidget\MyDoubleValidator.h">
+      <Filter>UI\MyWidget</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyWidget\SetingItem.h">
+      <Filter>UI\MyWidget</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyWidget\MyLogoButton.h">
+      <Filter>UI\MyWidget</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyWidget\MyTableWidget.h">
+      <Filter>UI\MyWidget</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyWidget\MyLabel.h">
+      <Filter>UI\MyWidget</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\DataStatistics.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\ImageWindow.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\ResultsListWidget.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\TimeStatistics.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyTitleBar.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyToolBar.h">
+      <Filter>UI</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyWidget\DialogTitleBar.h">
+      <Filter>UI\MyWidget</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyWidget\DockWidgetTitter.h">
+      <Filter>UI\MyWidget</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyDialog\SoftInfoDialog.h">
+      <Filter>UI\MyDialog</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\MyDialog\WaittingDialog.h">
+      <Filter>UI\MyDialog</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\Menu\ModelConfigDialg.h">
+      <Filter>UI\Menu</Filter>
+    </QtMoc>
+    <QtMoc Include="components\Config\JsonReader.h">
+      <Filter>compontents\Config</Filter>
+    </QtMoc>
+    <QtMoc Include="components\SaveImage\SaveImage.h">
+      <Filter>compontents\SaveImage</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\Performance\GpuMonitor.h">
+      <Filter>UI\Performance</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\Performance\OneMonitorWidget.h">
+      <Filter>UI\Performance</Filter>
+    </QtMoc>
+    <QtMoc Include="UI\Performance\PerformanceMonitorTitle.h">
+      <Filter>UI\Performance</Filter>
+    </QtMoc>
+    <QtMoc Include="DataManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="sqliteSetting.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="configmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="guoxuan.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ResultSetting.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Communicate\DialogSerialSettings.ui">
+      <Filter>Communicate</Filter>
+    </QtUic>
+    <QtUic Include="Communicate\DialogTCPSettings.ui">
+      <Filter>Communicate</Filter>
+    </QtUic>
+    <QtUic Include="Communicate\DialogMCBinSetting.ui">
+      <Filter>Communicate</Filter>
+    </QtUic>
+    <QtUic Include="Threshold\ThresholdSet.ui">
+      <Filter>Threshold</Filter>
+    </QtUic>
+    <QtUic Include="ImageSource\ImageSourceCameraSetting.ui">
+      <Filter>ImageSource</Filter>
+    </QtUic>
+    <QtUic Include="ImageSource\ImageSourceFileSetting.ui">
+      <Filter>ImageSource</Filter>
+    </QtUic>
+    <QtUic Include="ImageSource\ImageSourceSetting.ui">
+      <Filter>ImageSource</Filter>
+    </QtUic>
+    <QtUic Include="Threshold\RenderSetWidget.ui">
+      <Filter>Threshold</Filter>
+    </QtUic>
+    <QtUic Include="Threshold\VimoThreshold\ThresholdClassification.ui">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </QtUic>
+    <QtUic Include="Threshold\VimoThreshold\ThresholdDetection.ui">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </QtUic>
+    <QtUic Include="Threshold\VimoThreshold\ThresholdOCR.ui">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </QtUic>
+    <QtUic Include="Threshold\VimoThreshold\ThresholdSegmentation.ui">
+      <Filter>Threshold\VimoThreshold</Filter>
+    </QtUic>
+    <QtUic Include="SoftSetting\CommunicationMannger\AddCommunicationDialog.ui">
+      <Filter>SoftSetting\CommunicationMannger</Filter>
+    </QtUic>
+    <QtUic Include="SoftSetting\CommunicationMannger\CommunicationSetting.ui">
+      <Filter>SoftSetting\CommunicationMannger</Filter>
+    </QtUic>
+    <QtUic Include="SoftSetting\ProgrammeMannger\CreateProgrammeName.ui">
+      <Filter>SoftSetting\ProgrammeMannger</Filter>
+    </QtUic>
+    <QtUic Include="SoftSetting\ProgrammeMannger\ProgrammeMannger.ui">
+      <Filter>SoftSetting\ProgrammeMannger</Filter>
+    </QtUic>
+    <QtUic Include="SoftSetting\SaveImageMannger\SaveImageWidget.ui">
+      <Filter>SoftSetting\SaveImageMannger</Filter>
+    </QtUic>
+    <QtUic Include="SoftSetting\DisplaySetMannger\ShowSetting.ui">
+      <Filter>SoftSetting\DisplaySetMannger</Filter>
+    </QtUic>
+    <QtUic Include="SoftSetting\SoftSetting.ui">
+      <Filter>SoftSetting</Filter>
+    </QtUic>
+    <QtUic Include="UI\MyWidget\SetingItem.ui">
+      <Filter>UI\MyWidget</Filter>
+    </QtUic>
+    <QtUic Include="UI\MyWidget\MyLogoButton.ui">
+      <Filter>UI\MyWidget</Filter>
+    </QtUic>
+    <QtUic Include="UI\DataStatistics.ui">
+      <Filter>UI</Filter>
+    </QtUic>
+    <QtUic Include="UI\ImageWindow.ui">
+      <Filter>UI</Filter>
+    </QtUic>
+    <QtUic Include="UI\ResultsListWidget.ui">
+      <Filter>UI</Filter>
+    </QtUic>
+    <QtUic Include="UI\TimeStatistics.ui">
+      <Filter>UI</Filter>
+    </QtUic>
+    <QtUic Include="UI\MyWidget\DialogTitleBar.ui">
+      <Filter>UI\MyWidget</Filter>
+    </QtUic>
+    <QtUic Include="UI\MyWidget\DockWidgetTitter.ui">
+      <Filter>UI\MyWidget</Filter>
+    </QtUic>
+    <QtUic Include="UI\MyDialog\SoftInfoDialog.ui">
+      <Filter>UI\MyDialog</Filter>
+    </QtUic>
+    <QtUic Include="UI\MyDialog\WaittingDialog.ui">
+      <Filter>UI\MyDialog</Filter>
+    </QtUic>
+    <QtUic Include="UI\Menu\ModelConfigDialg.ui">
+      <Filter>UI\Menu</Filter>
+    </QtUic>
+    <QtUic Include="UI\Performance\OneMonitorWidget.ui">
+      <Filter>UI\Performance</Filter>
+    </QtUic>
+    <QtUic Include="UI\Performance\PerformanceMonitorTitle.ui">
+      <Filter>UI\Performance</Filter>
+    </QtUic>
+    <QtUic Include="DataManager.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ResultSetting.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PublicParamter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\Config\ConfigProgramme.h">
+      <Filter>compontents\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicate\MC_Bin\melsec_helper.h">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicate\MC_Bin\melsec_mc_ascii.h">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicate\MC_Bin\melsec_mc_bin.h">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicate\MC_Bin\melsec_mc_bin_private.h">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicate\MC_Bin\melsec_mc_comm.h">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicate\MC_Bin\socket.h">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicate\MC_Bin\typedef.h">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="Communicate\MC_Bin\utill.h">
+      <Filter>Communicate\MC_Bin</Filter>
+    </ClInclude>
+    <ClInclude Include="Algo\AlgoViMo.h">
+      <Filter>Algo</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageSource\ImageSourceCamera.h">
+      <Filter>ImageSource</Filter>
+    </ClInclude>
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoBase.h">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoClassification.h">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoDetection.h">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoOCR.h">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoSegmentation.h">
+      <Filter>Algo\ViMo_Module</Filter>
+    </ClInclude>
+    <ClInclude Include="_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DynamicWidget.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\icon.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Class View\UML.jpg">
+      <Filter>Algo\ClassView</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <QtTranslation Include="ChineseLanguage_zh.ts">
+      <Filter>Translation Files</Filter>
+    </QtTranslation>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Class View\Algo.cd">
+      <Filter>Algo\ClassView</Filter>
+    </None>
+    <None Include="Class View\Camera.cd">
+      <Filter>Algo\ClassView</Filter>
+    </None>
+    <None Include="Class View\Communicate.cd">
+      <Filter>Algo\ClassView</Filter>
+    </None>
+    <None Include="Class View\ImageSource.cd">
+      <Filter>Algo\ClassView</Filter>
+    </None>
+    <None Include="Class View\Main.cd">
+      <Filter>Algo\ClassView</Filter>
+    </None>
+    <None Include="Class View\MyStation.cd">
+      <Filter>Algo\ClassView</Filter>
+    </None>
+    <None Include="Class View\Threshold.cd">
+      <Filter>Algo\ClassView</Filter>
+    </None>
+  </ItemGroup>
+</Project>

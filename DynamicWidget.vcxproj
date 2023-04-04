@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C4CACB14-74A1-4E40-9BAE-B5027BCBEFF9}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.14.1_msvc2017_64</QtInstall>
+    <QtModules>core;network;gui;widgets;serialport</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="3rdParty\HikCamera.props" />
+    <Import Project="3rdParty\Opencv.props" />
+    <Import Project="3rdParty\ViMo3.1SDK_GPU.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>$(SolutionDir);$(ProjectDir);$(ProjectDir)Communicate;$(ProjectDir)Algo\ViMo_Module;$(ProjectDir)Algo;$(IncludePath)</IncludePath>
+    <TargetName>SMore ViLab</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)Communicate;$(ProjectDir);$(ProjectDir)Threshold;$(ProjectDir)ImageSource;$(ProjectDir)compontents\Camera;$(ProjectDir)Performance;$(ProjectDir)Algo\ViMo_Module;$(ProjectDir)Algo;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>Qt_NO_CAST_FROM_ASCII;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Algo\AlgoThread.cpp" />
+    <ClCompile Include="Algo\AlgoViMo.cpp" />
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoBase.cpp" />
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoClassification.cpp" />
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoDetection.cpp" />
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoOCR.cpp" />
+    <ClCompile Include="Algo\ViMo_Module\ViMoAlgoSegmentation.cpp" />
+    <ClCompile Include="Communicate\CommunicateBase.cpp" />
+    <ClCompile Include="Communicate\CommunicateMC_Bin.cpp" />
+    <ClCompile Include="Communicate\CommunicateSerial.cpp" />
+    <ClCompile Include="Communicate\CommunicateTCP.cpp" />
+    <ClCompile Include="Communicate\DialogMCBinSetting.cpp" />
+    <ClCompile Include="Communicate\DialogSerialSettings.cpp" />
+    <ClCompile Include="Communicate\DialogTCPSettings.cpp" />
+    <ClCompile Include="Communicate\MC_Bin\melsec_helper.cpp" />
+    <ClCompile Include="Communicate\MC_Bin\melsec_mc_ascii.cpp" />
+    <ClCompile Include="Communicate\MC_Bin\melsec_mc_bin.cpp" />
+    <ClCompile Include="Communicate\MC_Bin\melsec_mc_comm.cpp" />
+    <ClCompile Include="Communicate\MC_Bin\socket.cpp" />
+    <ClCompile Include="Communicate\MC_Bin\utill.cpp" />
+    <ClCompile Include="components\Camera\Camera.cpp" />
+    <ClCompile Include="components\Camera\CameraHikvision.cpp" />
+    <ClCompile Include="components\Camera\SoftTriggerConnect.cpp" />
+    <ClCompile Include="components\Config\ConfigProgramme.cpp" />
+    <ClCompile Include="components\Config\JsonReader.cpp" />
+    <ClCompile Include="components\SaveImage\SaveImage.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="configmanager.cpp" />
+    <ClCompile Include="DataManager.cpp" />
+    <ClCompile Include="guoxuan.cpp" />
+    <ClCompile Include="ImageSource\ImageSouceBase.cpp" />
+    <ClCompile Include="ImageSource\ImageSourceCamera.cpp" />
+    <ClCompile Include="ImageSource\ImageSourceCameraSetting.cpp" />
+    <ClCompile Include="ImageSource\ImageSourceFile.cpp" />
+    <ClCompile Include="ImageSource\ImageSourceFileSetting.cpp" />
+    <ClCompile Include="ImageSource\ImageSourceSetting.cpp" />
+    <ClCompile Include="MyStation.cpp" />
+    <ClCompile Include="PublicParamter.cpp" />
+    <ClCompile Include="ResultSetting.cpp" />
+    <ClCompile Include="SoftSetting\CommunicationMannger\AddCommunicationDialog.cpp" />
+    <ClCompile Include="SoftSetting\CommunicationMannger\CommunicationSetting.cpp" />
+    <ClCompile Include="SoftSetting\DisplaySetMannger\ShowSetting.cpp" />
+    <ClCompile Include="SoftSetting\ProgrammeMannger\CreateProgrammeName.cpp" />
+    <ClCompile Include="SoftSetting\ProgrammeMannger\ProgrammeMannger.cpp" />
+    <ClCompile Include="SoftSetting\SaveImageMannger\SaveImageWidget.cpp" />
+    <ClCompile Include="SoftSetting\SoftSetting.cpp" />
+    <ClCompile Include="sqliteSetting.cpp" />
+    <ClCompile Include="Threshold\RenderSetWidget.cpp" />
+    <ClCompile Include="Threshold\ThresholdBase.cpp" />
+    <ClCompile Include="Threshold\ThresholdSet.cpp" />
+    <ClCompile Include="Threshold\VimoThreshold\ThresholdClassification.cpp" />
+    <ClCompile Include="Threshold\VimoThreshold\ThresholdDetection.cpp" />
+    <ClCompile Include="Threshold\VimoThreshold\ThresholdOCR.cpp" />
+    <ClCompile Include="Threshold\VimoThreshold\ThresholdSegmentation.cpp" />
+    <ClCompile Include="UI\DataStatistics.cpp" />
+    <ClCompile Include="UI\ImageWindow.cpp" />
+    <ClCompile Include="UI\Menu\ModelConfigDialg.cpp" />
+    <ClCompile Include="UI\MyDialog\SoftInfoDialog.cpp" />
+    <ClCompile Include="UI\MyDialog\WaittingDialog.cpp" />
+    <ClCompile Include="UI\MyTitleBar.cpp" />
+    <ClCompile Include="UI\MyToolBar.cpp" />
+    <ClCompile Include="UI\MyWidget\DialogTitleBar.cpp" />
+    <ClCompile Include="UI\MyWidget\DockWidgetTitter.cpp" />
+    <ClCompile Include="UI\MyWidget\MyDoubleValidator.cpp" />
+    <ClCompile Include="UI\MyWidget\MyLabel.cpp" />
+    <ClCompile Include="UI\MyWidget\MyLogoButton.cpp" />
+    <ClCompile Include="UI\MyWidget\MyTableWidget.cpp" />
+    <ClCompile Include="UI\MyWidget\SetingItem.cpp" />
+    <ClCompile Include="UI\Performance\GpuMonitor.cpp" />
+    <ClCompile Include="UI\Performance\OneMonitorWidget.cpp" />
+    <ClCompile Include="UI\Performance\PerformanceMonitorTitle.cpp" />
+    <ClCompile Include="UI\ResultsListWidget.cpp" />
+    <ClCompile Include="UI\TimeStatistics.cpp" />
+    <QtRcc Include="DynamicWidget.qrc" />
+    <QtUic Include="Communicate\DialogMCBinSetting.ui" />
+    <QtUic Include="Communicate\DialogSerialSettings.ui" />
+    <QtUic Include="Communicate\DialogTCPSettings.ui" />
+    <QtUic Include="DataManager.ui" />
+    <QtUic Include="DynamicWidget.ui" />
+    <QtMoc Include="DynamicWidget.h" />
+    <ClCompile Include="DynamicWidget.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="ImageSource\ImageSourceCameraSetting.ui" />
+    <QtUic Include="ImageSource\ImageSourceFileSetting.ui" />
+    <QtUic Include="ImageSource\ImageSourceSetting.ui" />
+    <QtUic Include="ResultSetting.ui" />
+    <QtUic Include="SoftSetting\CommunicationMannger\AddCommunicationDialog.ui" />
+    <QtUic Include="SoftSetting\CommunicationMannger\CommunicationSetting.ui" />
+    <QtUic Include="SoftSetting\DisplaySetMannger\ShowSetting.ui" />
+    <QtUic Include="SoftSetting\ProgrammeMannger\CreateProgrammeName.ui" />
+    <QtUic Include="SoftSetting\ProgrammeMannger\ProgrammeMannger.ui" />
+    <QtUic Include="SoftSetting\SaveImageMannger\SaveImageWidget.ui" />
+    <QtUic Include="SoftSetting\SoftSetting.ui" />
+    <QtUic Include="Threshold\RenderSetWidget.ui" />
+    <QtUic Include="Threshold\ThresholdSet.ui" />
+    <QtUic Include="Threshold\VimoThreshold\ThresholdClassification.ui" />
+    <QtUic Include="Threshold\VimoThreshold\ThresholdDetection.ui" />
+    <QtUic Include="Threshold\VimoThreshold\ThresholdOCR.ui" />
+    <QtUic Include="Threshold\VimoThreshold\ThresholdSegmentation.ui" />
+    <QtUic Include="UI\DataStatistics.ui" />
+    <QtUic Include="UI\ImageWindow.ui" />
+    <QtUic Include="UI\Menu\ModelConfigDialg.ui" />
+    <QtUic Include="UI\MyDialog\SoftInfoDialog.ui" />
+    <QtUic Include="UI\MyDialog\WaittingDialog.ui" />
+    <QtUic Include="UI\MyWidget\DialogTitleBar.ui" />
+    <QtUic Include="UI\MyWidget\DockWidgetTitter.ui" />
+    <QtUic Include="UI\MyWidget\MyLogoButton.ui" />
+    <QtUic Include="UI\MyWidget\SetingItem.ui" />
+    <QtUic Include="UI\Performance\OneMonitorWidget.ui" />
+    <QtUic Include="UI\Performance\PerformanceMonitorTitle.ui" />
+    <QtUic Include="UI\ResultsListWidget.ui" />
+    <QtUic Include="UI\TimeStatistics.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="configmanager.h" />
+    <QtMoc Include="ResultSetting.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="_utils.h" />
+    <QtMoc Include="sqliteSetting.h" />
+    <QtMoc Include="UI\Performance\PerformanceMonitorTitle.h" />
+    <QtMoc Include="UI\Performance\OneMonitorWidget.h" />
+    <QtMoc Include="UI\Performance\GpuMonitor.h" />
+    <QtMoc Include="UI\Menu\ModelConfigDialg.h" />
+    <QtMoc Include="UI\MyDialog\WaittingDialog.h" />
+    <QtMoc Include="UI\MyDialog\SoftInfoDialog.h" />
+    <QtMoc Include="UI\MyWidget\DockWidgetTitter.h" />
+    <QtMoc Include="UI\MyWidget\DialogTitleBar.h" />
+    <QtMoc Include="UI\MyToolBar.h" />
+    <QtMoc Include="UI\MyTitleBar.h" />
+    <QtMoc Include="UI\TimeStatistics.h" />
+    <QtMoc Include="UI\ResultsListWidget.h" />
+    <QtMoc Include="UI\ImageWindow.h" />
+    <QtMoc Include="UI\DataStatistics.h" />
+    <QtMoc Include="UI\MyWidget\MyLabel.h" />
+    <QtMoc Include="UI\MyWidget\MyTableWidget.h" />
+    <QtMoc Include="UI\MyWidget\MyDoubleValidator.h" />
+    <QtMoc Include="UI\MyWidget\MyLogoButton.h" />
+    <QtMoc Include="UI\MyWidget\SetingItem.h" />
+    <QtMoc Include="SoftSetting\SoftSetting.h" />
+    <QtMoc Include="SoftSetting\DisplaySetMannger\ShowSetting.h" />
+    <QtMoc Include="SoftSetting\SaveImageMannger\SaveImageWidget.h" />
+    <QtMoc Include="SoftSetting\ProgrammeMannger\ProgrammeMannger.h" />
+    <QtMoc Include="SoftSetting\ProgrammeMannger\CreateProgrammeName.h" />
+    <QtMoc Include="SoftSetting\CommunicationMannger\CommunicationSetting.h" />
+    <QtMoc Include="SoftSetting\CommunicationMannger\AddCommunicationDialog.h" />
+    <QtMoc Include="Threshold\VimoThreshold\ThresholdSegmentation.h" />
+    <QtMoc Include="Threshold\VimoThreshold\ThresholdOCR.h" />
+    <QtMoc Include="Threshold\VimoThreshold\ThresholdDetection.h" />
+    <QtMoc Include="Threshold\VimoThreshold\ThresholdClassification.h" />
+    <QtMoc Include="Threshold\RenderSetWidget.h" />
+    <QtMoc Include="Threshold\ThresholdSet.h" />
+    <QtMoc Include="Threshold\ThresholdBase.h" />
+    <QtMoc Include="MyStation.h" />
+    <QtMoc Include="components\Camera\Camera.h" />
+    <QtMoc Include="components\Camera\CameraHikvision.h" />
+    <QtMoc Include="Communicate\CommunicateBase.h" />
+    <QtMoc Include="Communicate\CommunicateSerial.h" />
+    <QtMoc Include="Communicate\CommunicateTCP.h" />
+    <QtMoc Include="Communicate\DialogSerialSettings.h" />
+    <QtMoc Include="Communicate\DialogTCPSettings.h" />
+    <QtMoc Include="Communicate\CommunicateMC_Bin.h" />
+    <QtMoc Include="Communicate\DialogMCBinSetting.h" />
+    <QtMoc Include="Algo\AlgoThread.h" />
+    <ClInclude Include="Algo\AlgoViMo.h" />
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoBase.h" />
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoClassification.h" />
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoDetection.h" />
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoOCR.h" />
+    <ClInclude Include="Algo\ViMo_Module\ViMoAlgoSegmentation.h" />
+    <ClInclude Include="Communicate\MC_Bin\melsec_helper.h" />
+    <ClInclude Include="Communicate\MC_Bin\melsec_mc_ascii.h" />
+    <ClInclude Include="Communicate\MC_Bin\melsec_mc_bin.h" />
+    <ClInclude Include="Communicate\MC_Bin\melsec_mc_bin_private.h" />
+    <ClInclude Include="Communicate\MC_Bin\melsec_mc_comm.h" />
+    <ClInclude Include="Communicate\MC_Bin\socket.h" />
+    <ClInclude Include="Communicate\MC_Bin\typedef.h" />
+    <ClInclude Include="Communicate\MC_Bin\utill.h" />
+    <QtMoc Include="components\Camera\SoftTriggerConnect.h" />
+    <ClInclude Include="components\Config\ConfigProgramme.h" />
+    <QtMoc Include="ImageSource\ImageSouceBase.h" />
+    <QtMoc Include="components\Config\JsonReader.h" />
+    <QtMoc Include="components\SaveImage\SaveImage.h" />
+    <QtMoc Include="DataManager.h" />
+    <QtMoc Include="guoxuan.h" />
+    <ClInclude Include="ImageSource\ImageSourceCamera.h" />
+    <QtMoc Include="ImageSource\ImageSourceCameraSetting.h" />
+    <QtMoc Include="ImageSource\ImageSourceFile.h" />
+    <QtMoc Include="ImageSource\ImageSourceFileSetting.h" />
+    <QtMoc Include="ImageSource\ImageSourceSetting.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="PublicParamter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DynamicWidget.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Class View\UML.jpg" />
+    <Image Include="Resource\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtTranslation Include="ChineseLanguage_zh.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Class View\Algo.cd" />
+    <None Include="Class View\Camera.cd" />
+    <None Include="Class View\Communicate.cd" />
+    <None Include="Class View\ImageSource.cd" />
+    <None Include="Class View\Main.cd" />
+    <None Include="Class View\MyStation.cd" />
+    <None Include="Class View\Threshold.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

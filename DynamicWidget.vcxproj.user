@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerDebuggerType>Auto</LocalDebuggerDebuggerType>
+    <RemoteDebuggerCommand>D:\思谋\工作\Vimo 运行软件\0104_1.0.1.9\SMore_ViLab_V1.0.1.9\Release\SMore ViLab.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>D:\思谋\工作\Vimo 运行软件\0104_1.0.1.9\SMore_ViLab_V1.0.1.9\Release</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>10.80.166.211:4022</RemoteDebuggerServerName>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <RemoteDebuggerDebuggerType>NativeOnly</RemoteDebuggerDebuggerType>
+    <DeploymentDirectory>D:\思谋\工作\Vimo 运行软件\0104_1.0.1.9\SMore_ViLab_V1.0.1.9\Release</DeploymentDirectory>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtLastBackgroundBuild>2023-03-25T07:18:00.5498291Z</QtLastBackgroundBuild>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtLastBackgroundBuild>2023-03-25T07:17:58.6261231Z</QtLastBackgroundBuild>
+  </PropertyGroup>
+</Project>

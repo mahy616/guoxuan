@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="&lt;1&gt;图像源基类，提供了开始，停止，单步执行的接口&#xD;&#xA;&lt;2&gt;MyStation对象作为此类的成员变量，以访问算法类与列表类">
+    <Position X="6" Y="6.5" Height="0.558" Width="4.367" />
+  </Comment>
+  <Comment CommentText="通过设置界面勾选的复选框，实例不同的子列对象，相机图像源类与本地文件夹图像类">
+    <Position X="6.433" Y="8.758" Height="0.458" Width="3.064" />
+  </Comment>
+  <Comment CommentText="&lt;1&gt;加载的图片文件不会放在缓存中，通过MyStation指针将所有的图片路径插入到列表控件&#xD;&#xA;&lt;2&gt;每开始执行一次即是从列表控件中获取文件名的路径读图送入算法类&#xD;&#xA;&lt;3&gt;有int记录当前读取到第几行数据&#xD;&#xA;&lt;4&gt;连续运行时开始定时器，按一定频率将图片插入算法类中，插入算法类失败时会重新插入&#xD;&#xA;&lt;5&gt;读取到最后一张图，销毁定时器">
+    <Position X="8" Y="13.471" Height="1.847" Width="3.592" />
+  </Comment>
+  <Comment CommentText="开始工作与停止工作调用相机基类的接口">
+    <Position X="4.275" Y="13" Height="0.508" Width="2.525" />
+  </Comment>
+  <Class Name="ImageSourceBase">
+    <Position X="7" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImageSource\ImageSouceBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageSourceCamera">
+    <Position X="5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKAKAAQAAAAAAAAABAAAAAAAIBAAAAAAQAA=</HashCode>
+      <FileName>ImageSource\ImageSourceCamera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageSourceFile">
+    <Position X="8.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAOAAYAAAAAAAAABAAAAAAAIBAAQAAAQAA=</HashCode>
+      <FileName>ImageSource\ImageSourceFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageSourceCameraSetting">
+    <Position X="1" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAMAAAggAIlIAQBQECuAkoDhASEBbEBADAAAAYACQ=</HashCode>
+      <FileName>ImageSource\ImageSourceCameraSetting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageSourceSetting">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAEBQQAAACAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ImageSource\ImageSourceSetting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageSourceFileSetting">
+    <Position X="12.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAgAAAEQQAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImageSource\ImageSourceFileSetting.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

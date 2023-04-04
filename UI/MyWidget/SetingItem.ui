@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetingItemClass</class>
+ <widget class="QWidget" name="SetingItemClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>210</width>
+    <height>47</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SetingItem</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QWidget{
+color:#E0E0E0;
+background:transparent;
+border-top-left-radius:8;
+border-top-right-radius:8;
+}
+QWidget:hover
+{
+	background-color:rgb(50,50,50);
+}
+QWidget:pressed
+{
+	background-color:rgb(100,100,100);
+}
+QLabel{
+color:#999999;
+}
+QLabel:hover
+{
+	background-color:rgb(50,50,50);
+}
+QLabel:pressed
+{
+	background-color:rgb(100,100,100);
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>5</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>5</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,4">
+     <item>
+      <widget class="QLabel" name="label_Icon">
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:transparent;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_Text">
+       <property name="styleSheet">
+        <string notr="true">background:transparent;
+color:#E3E3E3;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="相机基类">
+    <Position X="2.158" Y="0.975" Height="0.333" Width="1.258" />
+  </Comment>
+  <Comment CommentText="&lt;1&gt;相机软触发时的连接类&#xD;&#xA;&lt;2&gt;通过Binding函数将相机与通讯对象连接起来，在此函数内可重写具体的软触发逻辑&#xD;&#xA;&lt;3&gt;此类是单例，在相机设置界面点击软触发的绑定按钮时调用，将相机与通讯信息存到std::vector&lt;ConnectInfo&gt;">
+    <Position X="5.392" Y="0.7" Height="1.042" Width="4.258" />
+  </Comment>
+  <Class Name="Camera" Collapsed="true">
+    <Position X="2" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBICAAAACAAEBBICQAAAQACAAAAAGVBEBAKKIAAgABA=</HashCode>
+      <FileName>components\Camera\Camera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraHikvision" Collapsed="true">
+    <Position X="2" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIAgAABCQAsBBICAIAgQEAAACAAEFBEBACCAIAiAIA=</HashCode>
+      <FileName>components\Camera\CameraHikvision.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoftTriggerConnect">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgACBAAAACAABAAAAAAMAAAAACAAACA=</HashCode>
+      <FileName>SoftTriggerConnect.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CommunicateBase">
+    <Position X="11" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAgAAAAAAAEAAAABAAAAAgAAAAAAACAAAAAAGACAA=</HashCode>
+      <FileName>Communicate\CommunicateBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ConnectInfo">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SoftTriggerConnect.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

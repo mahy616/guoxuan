@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="&lt;1&gt;回调函数从算法类获取信息&#xD;&#xA;&lt;2&gt;考虑到串联方案，存放的成员变量(后处理阈值类与显示类)都是数组&#xD;&#xA;&lt;2&gt;通过ThresholdBase实例化后插入StackWidget控件显示">
+    <Position X="0.5" Y="0.5" Height="0.904" Width="4.217" />
+  </Comment>
+  <Comment CommentText="显示设置，绘制轮廓与颜色">
+    <Position X="9.925" Y="0.5" Height="0.342" Width="1.817" />
+  </Comment>
+  <Comment CommentText="&lt;1&gt;ViMo的后处理阈值类&#xD;&#xA;&lt;2&gt;通过设计基类提供获取阈值的接口&#xD;&#xA;&lt;3&gt;通过一个大结构体的引用，每个子类赋值对应的成员结构体变量">
+    <Position X="9.75" Y="3" Height="1.066" Width="2.792" />
+  </Comment>
+  <Class Name="ThresholdSet">
+    <Position X="1.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>JAAAAIAAAAAQEAAAQQAAEgCAAAACAAAkABQCgAAAAAA=</HashCode>
+      <FileName>Threshold\ThresholdSet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThresholdBase">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACCACAAAAA=</HashCode>
+      <FileName>Threshold\ThresholdBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThresholdClassification">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <InheritanceLine Type="ThresholdBase" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="4.252" />
+        <Point X="8.5" Y="6.133" />
+        <Point X="6" Y="6.133" />
+        <Point X="6" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAEEAAAAAAAAAAAAIAAAJAAAACAAAAAAA=</HashCode>
+      <FileName>Threshold\ThresholdClassification.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThresholdDetection">
+    <Position X="7.25" Y="7.5" Width="1.5" />
+    <InheritanceLine Type="ThresholdBase" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="4.252" />
+        <Point X="8.5" Y="6.414" />
+        <Point X="8" Y="6.414" />
+        <Point X="8" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAABQAAAEAAAAAAAAAAAAAIAAAJBIAgCAAAAAAA=</HashCode>
+      <FileName>Threshold\ThresholdDetection.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThresholdOCR">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <InheritanceLine Type="ThresholdBase" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="4.252" />
+        <Point X="8.5" Y="6.167" />
+        <Point X="11.75" Y="6.167" />
+        <Point X="11.75" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gACAQAAAAAAAEAAAAAAAAAAQAAIAAAJIIAACAAAAAAA=</HashCode>
+      <FileName>Threshold\ThresholdOCR.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThresholdSegmentation">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <InheritanceLine Type="ThresholdBase" ManuallyRouted="true">
+      <Path>
+        <Point X="8.5" Y="4.252" />
+        <Point X="8.5" Y="6.421" />
+        <Point X="10" Y="6.421" />
+        <Point X="10" Y="7.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAABAAAAEgAAIAAAAAgAAAIAAIJBAAgCAABAAIA=</HashCode>
+      <FileName>Threshold\ThresholdSegmentation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RenderSetWidget" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAIAEAgAAQAAAAAAAAIAAQAAIEAAQAAAAAA=</HashCode>
+      <FileName>Threshold\RenderSetWidget.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SegThresholdVec">
+    <Position X="23" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACACAAAAAAAIAAAAAABAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DetectionThresholdVec" Collapsed="true">
+    <Position X="21.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAgAAAAAAAAAAABAAAAAAAAgAAAAAAAE=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ClassificationThresholdVec">
+    <Position X="19.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SegThreshold">
+    <Position X="23" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAAEAAAAA=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DetectionThreshold">
+    <Position X="21.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="OcrSdkThreshold">
+    <Position X="17.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="OCRThreshold">
+    <Position X="17.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ClassificationThreshold">
+    <Position X="19.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ThresholdParams">
+    <Position X="20.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAARAAAAAABgAA=</HashCode>
+      <FileName>PublicParamter.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
