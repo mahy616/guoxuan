@@ -34,7 +34,7 @@ bool ImageSourceFile::isCanStart()
 bool ImageSourceFile::Start()
 {
 	if (m_Station->m_TableWidget->rowCount() == 0) return false; //Í¼ÏñÁĞ±íÎª¿Õ£¬Ã»ÓĞÍ¼Æ¬£¬Æô¶¯Ê§°Ü
-	m_ReadImgTimer->start(500);
+	m_ReadImgTimer->start(100);
 	return true;
 }
 

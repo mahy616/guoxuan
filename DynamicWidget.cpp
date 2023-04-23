@@ -6,7 +6,52 @@
 #include "UI/MyDialog/WaittingDialog.h"
 #include "PublicParamter.h"
 #include <QSplitter>
+void outputMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+{
+	static QMutex mutex;
+	mutex.lock();
 
+	QString text;
+	switch (type)
+	{
+	case QtDebugMsg:
+		text = QString("Debug:");
+		break;
+
+	case QtWarningMsg:
+		text = QString("Warning:");
+		break;
+
+	case QtCriticalMsg:
+		text = QString("Critical:");
+		break;
+
+	case QtFatalMsg:
+		text = QString("Fatal:");
+	}
+
+	QString context_info = QString("File:(%1) Line:(%2)").arg(QString::fromLocal8Bit(context.file)).arg(context.line);
+	QString current_date_time = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss.zzz ddd");
+	QString current_date = QString("(%1)").arg(current_date_time);
+	QString message = QString("%1          %2 %3 %4").arg(current_date).arg(text).arg(context_info).arg(msg);
+	QString LogPath = QCoreApplication::applicationDirPath();
+	LogPath.append("/log");
+	QDir dir(LogPath);
+	if (!dir.exists(LogPath))
+	{
+		dir.mkdir(LogPath);
+	}
+	QString logFile = LogPath + "/" + QDateTime::currentDateTime().toString("yyyy-MM-dd");
+	logFile.append(".txt");
+	QFile file(logFile);
+	file.open(QIODevice::WriteOnly | QIODevice::Append);
+	QTextStream text_stream(&file);
+	text_stream << message << "\r\n";
+	file.flush();
+	file.close();
+
+	mutex.unlock();
+}
 DynamicWidget *DynamicWidget::m_Instance = nullptr;
 DynamicWidget *DynamicWidget::GetInstance()
 {
@@ -18,17 +63,19 @@ DynamicWidget::DynamicWidget(QWidget *parent)
 {
 	ui.setupUi(this);
 	m_Instance = this;
-
+	qInstallMessageHandler(outputMessage);
 	inintTitteBar();
 	InintWindow();	
 	InintConnection();
 	InintParameter();
 	guoxuan::get_instance().initStart();
+	sqliteSetting::GetInstance();
 	LoadParameter();
 	//guoxuan::get_instance();
 	//等构造函数执行完加载方案(构造函数没结束就加载方案重新布局页面会导致有些样式设置不成功) 
 	QTimer *m_delay = new QTimer(this); m_delay->start(10);
 	connect(m_delay, &QTimer::timeout, this, [=]() { LoadProgramme(ConfigProgramme::GetInstance()->LoadWhichPro()); m_delay->stop(); delete m_delay; });
+	ActionStartWorkSlot();
 }
 
 DynamicWidget::~DynamicWidget()
@@ -210,6 +257,27 @@ void DynamicWidget::LoadParameter()
 	QString end_direction = cfg->GetString(DIRECTION, END);
 	guoxuan::get_instance().set_head_type_direction(head_direction);
 	guoxuan::get_instance().set_end_type_direction(end_direction);
+
+
+	CFGDATA head,end;
+	head.Alignment = cfg->GetDouble(HEADSETTING, HEADALIGNMENT);
+	head.Change = cfg->GetDouble(HEADSETTING, HEADCHANGE);
+	head.WarningLeft = cfg->GetDouble(HEADSETTING, HEADWARNINGLEFT);
+	head.WarningMiddle = cfg->GetDouble(HEADSETTING, HEADWARNINGMIDDLE);
+	head.WarningRight = cfg->GetDouble(HEADSETTING, HEADWARNINGRIGHT);
+
+	end.type= cfg->GetInt(ENDSETTING, ENDTYPE);
+	end.AlignmentLeft = cfg->GetDouble(ENDSETTING, ENDALIGNMENTLEFT);
+	end.AlignmentMiddle = cfg->GetDouble(ENDSETTING, ENDALIGNMENTMIDDLE);
+	end.AlignmentRight = cfg->GetDouble(ENDSETTING, ENDALIGNMENTRIGHT);
+
+	end.ChangeLeft = cfg->GetDouble(ENDSETTING, ENDCHANGELEFT);
+	end.ChangeRight = cfg->GetDouble(ENDSETTING, ENDCHANGERIGHT);
+
+	end.WarningMiddle = cfg->GetDouble(ENDSETTING, ENDWARNINGMIDDLE);
+	guoxuan::get_instance().set_head_data(head);
+	guoxuan::get_instance().set_end_data(end);
+	m_result_setting->initShow();
 }
 
 
@@ -333,6 +401,8 @@ void DynamicWidget::Action_SystemSetSlot()
 void DynamicWidget::Action_SqlDataSlot()
 {
 	DataManager *m_sqlData = new DataManager;
+	m_sqlData->setAttribute(Qt::WA_DeleteOnClose, true);//窗口关闭时自动销毁
+	m_sqlData->setAttribute(Qt::WA_ShowModal, true);
 	m_sqlData->show();
 }
 

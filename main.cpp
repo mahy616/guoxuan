@@ -5,9 +5,12 @@
 #include <QSharedMemory>
 #include <QMessageBox>
 #include <QWidget>
+#include "EasyDump.h"
+
 
 int main(int argc, char *argv[])
 {
+	SetUnhandledExceptionFilter(ExceptionFilter);//异常处理 生成dmp文件
 	QApplication a(argc, argv);
 	QFont f("Roboto",9); a.setFont(f);
 

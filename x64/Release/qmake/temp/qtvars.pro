@@ -1,2 +1,2 @@
 CONFIG += no_fixpath
-QT += core network gui widgets serialport
+QT += core sql network gui widgets serialport printsupport axcontainer

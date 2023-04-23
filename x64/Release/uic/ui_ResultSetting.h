@@ -59,6 +59,7 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_5;
     QHBoxLayout *horizontalLayout_4;
+    QRadioButton *radioButton;
     QRadioButton *radioButton_left;
     QRadioButton *radioButton_middle;
     QRadioButton *radioButton_right;
@@ -280,6 +281,11 @@ public:
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        radioButton = new QRadioButton(groupBox_2);
+        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+
+        horizontalLayout_4->addWidget(radioButton);
+
         radioButton_left = new QRadioButton(groupBox_2);
         radioButton_left->setObjectName(QString::fromUtf8("radioButton_left"));
 
@@ -453,6 +459,7 @@ public:
         label_14->setText(QCoreApplication::translate("ResultSetting", "\350\266\205\351\231\220\346\212\245\350\255\246:", nullptr));
         label_16->setText(QCoreApplication::translate("ResultSetting", "\344\270\255\346\240\207\345\207\206\345\200\274", nullptr));
         label_5->setText(QCoreApplication::translate("ResultSetting", "\345\257\271\351\275\220\346\226\271\345\274\217\350\256\276\347\275\256:", nullptr));
+        radioButton->setText(QCoreApplication::translate("ResultSetting", "\345\215\225\347\233\270\346\234\272\346\250\241\345\274\217", nullptr));
         radioButton_left->setText(QCoreApplication::translate("ResultSetting", "\345\267\246\345\257\271\351\275\220", nullptr));
         radioButton_middle->setText(QCoreApplication::translate("ResultSetting", "\344\270\255\345\257\271\351\275\220", nullptr));
         radioButton_right->setText(QCoreApplication::translate("ResultSetting", "\345\217\263\345\257\271\351\275\220", nullptr));

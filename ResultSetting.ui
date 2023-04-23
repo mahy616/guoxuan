@@ -238,6 +238,13 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
+           <widget class="QRadioButton" name="radioButton">
+            <property name="text">
+             <string>单相机模式</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QRadioButton" name="radioButton_left">
             <property name="text">
              <string>左对齐</string>

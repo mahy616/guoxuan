@@ -45,6 +45,7 @@ public:
     QToolButton *toolButton_chooseTime;
     QDateEdit *dateEdit_StartDate;
     QDateEdit *dateEdit_EndDate;
+    QSpacerItem *horizontalSpacer_4;
     QPushButton *pushButton_Query;
     QWidget *widget;
     QGridLayout *gridLayout_2;
@@ -164,6 +165,10 @@ public:
         dateEdit_EndDate->setCalendarPopup(true);
 
         horizontalLayout_2->addWidget(dateEdit_EndDate);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_4);
 
         pushButton_Query = new QPushButton(widget_4);
         pushButton_Query->setObjectName(QString::fromUtf8("pushButton_Query"));

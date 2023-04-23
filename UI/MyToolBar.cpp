@@ -91,6 +91,7 @@ void MyToolBar::InintWidget()
 	QAction_Setting = this->addWidget(Btn_Setting);
 
 	Btn_sqlDataSetting = new QToolButton;
+	Btn_sqlDataSetting->setStyleSheet(MyStytleSheet("AlgoNone", "AlgoNone"));
 	QAction_sqlDataSetting = this->addWidget(Btn_sqlDataSetting);
 
 	this->setStyleSheet("QLabel#Label_State { border-image:url(\":/DynamicWidget/Resource/State_NoRunning.png\"); }");

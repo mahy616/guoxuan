@@ -1,6 +1,6 @@
 #include "DataManager.h"
-#include "qdir.h"
-
+#include <QSqlTableModel>
+#include <QAxObject>
 DataManager::DataManager(QDialog *parent /* = NULL */)
 	:QDialog(parent)
 {
@@ -8,6 +8,13 @@ DataManager::DataManager(QDialog *parent /* = NULL */)
 	InitVariables();
 	InitConnections();
 }
+
+void DataManager::initTableView()
+{
+
+
+}
+
 
 void DataManager::InitVariables()
 {
@@ -30,20 +37,19 @@ void DataManager::InitVariables()
 	//ui.tableWidget->horizontalHeader()->setFont(font);
 	ui.tableWidget->horizontalHeader()->setHighlightSections(false);
 	ui.tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{color:rgba(0, 0, 0, 0.85);background:rgba(233, 238, 242, 1);}");
-	ui.tableWidget->setColumnCount(6);
+	ui.tableWidget->setColumnCount(4);
 	ui.tableWidget->setAlternatingRowColors(1);
 	QStringList header;
-	header << QString::fromLocal8Bit("数据生成日期")
-		<< QString::fromLocal8Bit("区域宽度1")
-		<< QString::fromLocal8Bit("区域宽度2")
-		<< QString::fromLocal8Bit("区域宽度3")
-		<< QString::fromLocal8Bit("总宽度")
-		<< QString::fromLocal8Bit("不良位置");
+	header << QString::fromLocal8Bit("数据生成日期")<< QString::fromLocal8Bit("报警类型")<< QString::fromLocal8Bit("超限值")<< QString::fromLocal8Bit("位置");
 		   
 	ui.tableWidget->setHorizontalHeaderLabels(header);
 
 	ui.dateEdit_StartDate->setEnabled(false);
 	ui.dateEdit_EndDate->setEnabled(false);
+	ui.lineEdit_Code->hide();
+	ui.toolButton_chooseTime->hide();
+	ui.dateEdit_StartDate->hide();
+	ui.dateEdit_EndDate->hide();
 
 }
 
@@ -56,16 +62,43 @@ void DataManager::InitConnections()
 
 void DataManager::on_pushButton_clear_clicked()
 {
-	QMessageBox::information(nullptr, tr("tips"), tr("clear success"));
+	sqliteSetting::GetInstance()->deleteRecord();
 }
 
 void DataManager::on_pushButton_out_clicked()
 {
+	sqliteSetting::GetInstance()->writeCsv();
+	QMessageBox msgBox;
+	msgBox.setText(QString::fromLocal8Bit("导出完成"));
+	msgBox.exec();
+
 }
 
 void DataManager::on_pushButton_Query_clicked()
 {
 
+		//ui.tableWidget->clear();//每次查询之前先清空一下原有的内容
+		ui.tableWidget->setRowCount(0);
+		ui.tableWidget->clearContents();
+		QVector<QVector<QString>>all_data = sqliteSetting::GetInstance()->searchRecord();
+
+		
+		for (int row = 0; row < all_data.size(); row++)
+		{
+			ui.tableWidget->insertRow(ui.tableWidget->rowCount());
+			for (int col = 0; col < all_data[row].size(); ++col)
+			{
+				QString Data = all_data[row][col];
+				QTableWidgetItem *item = new QTableWidgetItem(Data);
+				ui.tableWidget->setItem(row, col, item);
+			}
+		}
+	
+}
+
+void DataManager::on_pushButton_close_clicked()
+{
+	reject();
 }
 
 

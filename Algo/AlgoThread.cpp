@@ -119,7 +119,7 @@ void CAlgoThread::run()
 		emit SendDetectionResult(copyMat, RenderImage, isGood, SendTime);
 		emit SendResultToTable(nowTableIndex, isGood, SendTime, outStr);
 		//emit SendToSaveImg(copyMat, RenderImage, isGood, outStr, nowTableIndex, ImageFileName);
-		if (outStr.size() < 23)
+		if (outStr.size() < 19)
 		{
 			QString msg;
 			if (*MyWindowIndex == 1)

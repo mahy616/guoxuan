@@ -1,7 +1,7 @@
 {
   "ModuleData":  [
     {
-      "ID":  "44654",
+      "ID":  "45092",
       "Name":  "OCR1",
       "Type":  "ocr",
       "ModelVersion":  "v1",
@@ -52,10 +52,6 @@
         },
         {
           "Name":  "9",
-          "Color":  "#D40005"
-        },
-        {
-          "Name":  "-",
           "Color":  "#D40005"
         },
         {

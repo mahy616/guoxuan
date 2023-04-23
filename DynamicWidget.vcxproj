@@ -37,8 +37,8 @@
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
-    <QtInstall>5.14.1_msvc2017_64</QtInstall>
-    <QtModules>core;network;gui;widgets;serialport</QtModules>
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;sql;network;gui;widgets;serialport;printsupport;axcontainer</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -129,6 +129,7 @@
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="configmanager.cpp" />
     <ClCompile Include="DataManager.cpp" />
+    <ClCompile Include="EasyDump.cpp" />
     <ClCompile Include="guoxuan.cpp" />
     <ClCompile Include="ImageSource\ImageSouceBase.cpp" />
     <ClCompile Include="ImageSource\ImageSourceCamera.cpp" />
@@ -217,6 +218,7 @@
     <QtMoc Include="configmanager.h" />
     <QtMoc Include="ResultSetting.h" />
     <ClInclude Include="Config.h" />
+    <ClInclude Include="EasyDump.h" />
     <ClInclude Include="_utils.h" />
     <QtMoc Include="sqliteSetting.h" />
     <QtMoc Include="UI\Performance\PerformanceMonitorTitle.h" />

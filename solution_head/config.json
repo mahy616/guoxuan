@@ -2,14 +2,14 @@
   "Version":  "2.2.2",
   "Types":  [
     {
-      "DatasetID":  "18211",
-      "Name":  "18211",
+      "DatasetID":  "18422",
+      "Name":  "18422",
       "Solutions":  [
         {
           "No":  0,
           "Modules":  [
             {
-              "Name":  "44654",
+              "Name":  "45092",
               "Type":  "ocr",
               "Input":  {
                 "LastAction":  {
@@ -17,17 +17,17 @@
                   "Action":  -1
                 },
                 "UserInput":  {
-                  "RelativePosition":  "-9,-14",
+                  "RelativePosition":  "5,-51",
                   "Roi":  "",
                   "Spin":  0,
-                  "Xdelta":  -79,
-                  "Ydelta":  -374
+                  "Xdelta":  -94,
+                  "Ydelta":  -403
                 }
               },
               "ModelPath":  [
-                "67799/0/model/model-final.smartmore"
+                "68333/0/model/model-final.smartmore"
               ],
-              "ModelID":  "67799",
+              "ModelID":  "68333",
               "RealName":  "OCR1"
             }
           ]

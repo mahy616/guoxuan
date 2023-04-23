@@ -317,7 +317,7 @@ QString ViMoAlgoDetection::GenSegText(cv::Mat &RenderImage)
 	}
 	if (returnStr.size() == 0)
 	{
-		returnStr = "无推理结果";
+		returnStr = "-";
 	}
 	//PutTextChinese(RenderImage, returnStr, Scalar(0, 0, 255), 50);
 	//putTextZH(RenderImage, returnStr.toLocal8Bit().toStdString().c_str()/*tempString.toLocal8Bit().toStdString().c_str()*/, cv::Point(RenderImage.cols / 12, RenderImage.rows / 12), cv::Scalar(0, 0, 255), RenderImage.cols / 30);

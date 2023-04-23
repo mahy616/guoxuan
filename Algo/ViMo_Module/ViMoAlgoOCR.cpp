@@ -290,6 +290,7 @@ bool ViMoAlgoOCR::guoxuan_processing(smartmore::vimo::OcrResponse rsp, cv::Mat i
 {
 	//if (rsp.blocks.size() == 26 || rsp.blocks.size() == 13)
 	//{
+	qDebug() << "guoxuan_processing start";
 		if (RenderImage.channels() == 1)
 			cv::cvtColor(RenderImage, RenderImage, cv::COLOR_GRAY2BGR);
 		if (rsp.blocks.empty())
@@ -341,8 +342,10 @@ bool ViMoAlgoOCR::guoxuan_processing(smartmore::vimo::OcrResponse rsp, cv::Mat i
 		under_blocks.assign(tempResponse.blocks.begin() + number, tempResponse.blocks.end());
 		m_OCRThreshold.SortFunction = SortByX;
 		QString above_str, under_str;
+		qDebug() << "guoxuan_processing1 start";
 		guoxuan_processing1(above_blocks, above_str);
 		guoxuan_processing1(under_blocks, under_str);
+		qDebug() << "guoxuan_processing1 end";
 		ResultStr = above_str + "," + under_str;
 		//sort(above_blocks.begin(), above_blocks.end(), m_OCRThreshold.SortFunction == SortByX ? myCompareByX : myCompareByY);//ÉýÐòÅÅÁÐ
 		//sort(under_blocks.begin(), under_blocks.end(), m_OCRThreshold.SortFunction == SortByX ? myCompareByX : myCompareByY);//ÉýÐòÅÅÁÐ
